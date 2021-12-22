@@ -8,4 +8,5 @@ elif number == 0:
 else:
     rta = "is negative"
 print ("{:d}".format(number),rta)
+
     
