@@ -5,7 +5,7 @@
 class Rectangle():
     """class Rectangle"""
 
-    def _init_(self, width=0, height=0):
+    def __init__(self, width=0, height=0):
         """ instantiation """
         self.width = width
         self.height = height
@@ -19,8 +19,8 @@ class Rectangle():
     def width(self, value):
         """ to set width - defines value of class rectangle width """
         if type(value) != int:
-            raise typeError('width must be an integer')
-        if type(value) < 0:
+            raise TypeError('width must be an integer')
+        if value < 0:
             raise ValueError('width must be >= 0')
         self.__width = value
 
@@ -33,8 +33,7 @@ class Rectangle():
     def height(self, value):
         """ to set height - defines value of class rectangle height """
         if type(value) != int:
-            raise typeError('height must be an integer')
-        if type(value) < 0:
+            raise TypeError('height must be an integer')
+        if value < 0:
             raise ValueError('height must be >= 0')
         self.__height = value
-    pass
