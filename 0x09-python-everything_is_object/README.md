@@ -1,8 +1,5 @@
 0x09. Python - Everything is object
 ---
-![](https://giphy.com/gifs/batman-look-whoa-wAjfQ9MLUfFjq)
-
----
 Learning Objectives
 ---
 - Why Python programming is awesome
