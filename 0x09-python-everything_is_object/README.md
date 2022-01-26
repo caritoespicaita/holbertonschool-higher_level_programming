@@ -1,6 +1,7 @@
 0x09. Python - Everything is object
 ---
-![Alt Text](https://giphy.com/embed/wAjfQ9MLUfFjq) 
+![Alt Text]
+(https://giphy.com/embed/wAjfQ9MLUfFjq) 
 
 ---
 Learning Objectives
