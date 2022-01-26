@@ -1,6 +1,7 @@
 0x09. Python - Everything is object
 ---
-<iframe src="https://giphy.com/embed/wAjfQ9MLUfFjq" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/batman-look-whoa-wAjfQ9MLUfFjq">via GIPHY</a></p>
+![](https://giphy.com/embed/wAjfQ9MLUfFjq) width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen>
+
 ---
 Learning Objectives
 ---
@@ -18,6 +19,7 @@ Learning Objectives
 - What are the built-in mutable types
 - What are the built-in immutable types
 - How does Python pass variables to functions
+
 ---
 Tasks
 ---
