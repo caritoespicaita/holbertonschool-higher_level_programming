@@ -1,6 +1,6 @@
 0x09. Python - Everything is object
 ---
-![alt Text]<iframe src="https://giphy.com/embed/wAjfQ9MLUfFjq" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/batman-look-whoa-wAjfQ9MLUfFjq">via GIPHY</a></p>
+![](https://giphy.com/gifs/batman-look-whoa-wAjfQ9MLUfFjq)
 
 ---
 Learning Objectives
