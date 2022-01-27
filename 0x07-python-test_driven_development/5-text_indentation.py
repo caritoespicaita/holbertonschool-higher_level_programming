@@ -18,4 +18,3 @@ def text_indentation(text):
             print((line + '\n').lstrip(' '))
             line = ""
     print(line.lstrip(' '), end='')
-    
