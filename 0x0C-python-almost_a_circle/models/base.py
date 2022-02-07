@@ -14,29 +14,28 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-    
+
     @staticmethod
     def to_json_string(list_dictionaries):
-        """static method tha returns the JSON 
-           string representation list_dictionaries"""
+        """static method tha returns the JSON
+        string representation list_dictionaries"""
         if list_dictionaries is None:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
-    
+
     @classmethod
     def save_to_file(cls, list_objs):
-        """ class method  that writes the JSON string 
-            representation of list_objs to a file """
+        """ class method  that writes the JSON string
+        representation of list_objs to a file """
         filename = cls.__name__ + ".json"
         with open(filename, mode="w") as file:
             if list_objs is None:
                 file.write("[]")
             else:
                 file.write(cls.to_json_string(
-                            [element.to_dictionary() for element in list_objs]))          
+                            [item.to_dictionary() for item in list_objs]))
 
-    
     @staticmethod
     def from_json_string(json_string):
         """static method tha returns the JSON
@@ -49,7 +48,7 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """  class method that returns an
-            instance with all attributes already set  
+            instance with all attributes already set
         """
         from models.rectangle import Rectangle
         from models.square import Square
@@ -61,15 +60,16 @@ class Base:
 
         dummy.update(**dictionary)
         return dummy
-    
+
     @classmethod
     def load_from_file(cls):
         """ class method that returns a list of instances """
-        filename = cls.__name__ + ".json" 
+
+        filename = cls.__name__ + ".json"
         with open(filename, mode="w") as file:
             if filename is None:
                 file.write("[]")
             else:
                 with open(filename, mode="r") as file:
                     file.write(cls.to_json_string(
-                            [element.to_dictionary() for element in list_objs]))            
+                            [item.to_dictionary() for item in list_objs]))
