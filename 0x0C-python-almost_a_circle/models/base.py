@@ -66,10 +66,10 @@ class Base:
     def load_from_file(cls):
         """ class method that returns a list of instances """
         filename = cls.__name__ + ".json" 
-         with open(filename, mode="w") as file:
+        with open(filename, mode="w") as file:
             if filename is None:
                 file.write("[]")
             else:
                 with open(filename, mode="r") as file:
-                file.write(cls.to_json_string(
+                    file.write(cls.to_json_string(
                             [element.to_dictionary() for element in list_objs]))            
