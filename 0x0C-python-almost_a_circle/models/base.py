@@ -66,10 +66,13 @@ class Base:
         """ class method that returns a list of instances """
 
         filename = cls.__name__ + ".json"
-        with open(filename, mode="w") as file:
+        with open(filename, mode="r") as file:
             if filename is None:
                 file.write("[]")
             else:
-                with open(filename, mode="r") as file:
-                    file.write(cls.to_json_string(
-                            [item.to_dictionary() for item in list_objs]))
+                read_file = file.read()
+                list_dict = cls.from_json_string(read_file)
+                list = []
+                for lists in list_dict:
+                    list.append(cls.create(**lists))
+                return list
