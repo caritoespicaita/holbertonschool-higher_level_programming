@@ -64,15 +64,14 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """ class method that returns a list of instances """
-
-        filename = cls.__name__ + ".json"
-        with open(filename, mode="r") as file:
-            read_file = file.read()
-            list_dict = cls.from_json_string(read_file)
-            list = []
-            if filename is None:
-                return []
-            else:
+        try:
+            filename = cls.__name__ + ".json"
+            with open(filename, mode="r") as file:
+                read_file = file.read()
+                list_dict = cls.from_json_string(read_file)
+                list = []
                 for lists in list_dict:
                     list.append(cls.create(**lists))
                 return list
+        except Exception:
+            return []
