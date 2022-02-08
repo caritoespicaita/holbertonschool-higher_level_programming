@@ -75,3 +75,17 @@ class Base:
                 return list
         except Exception:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """that serializes and deserializes in CSV"""
+        filename = cls.__name__ + ".csv"
+        with open(filename, 'w', newline='') as csvfile:
+            csv_writer = csv.writer(csvfile)
+            if cls.__name__ is "Rectangle":
+                for obj in list_objs:
+                    csv_writer.writerow([obj.id, obj.width, obj.height,
+                                         obj.x, obj.y])
+            elif cls.__name__ is "Square":
+                for obj in list_objs:
+                    csv_writer.writerow([obj.id, obj.size, obj.x, obj.y])
