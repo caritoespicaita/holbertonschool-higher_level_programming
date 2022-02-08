@@ -68,7 +68,7 @@ class Base:
         filename = cls.__name__ + ".json"
         with open(filename, mode="r") as file:
             if filename is None:
-                file.write("[]")
+                return []
             else:
                 read_file = file.read()
                 list_dict = cls.from_json_string(read_file)
