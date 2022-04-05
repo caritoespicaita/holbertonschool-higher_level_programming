@@ -1,3 +1,4 @@
+#!/usr/bin/node
 const array = process.argv.slice(2);
 
 if (array.length <= 1) {
