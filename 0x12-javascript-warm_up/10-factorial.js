@@ -1,6 +1,5 @@
 #!/usr/bin/node
 function factorial (n) {
-  const total = 1;
   if (!n) {
     return 1;
   }
