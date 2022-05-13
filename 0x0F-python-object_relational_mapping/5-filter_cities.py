@@ -14,4 +14,3 @@ if __name__ == '__main__':
     ORDER BY c.id', {'fil': sys.argv[4]})
     rows = cur.fetchall()
     print(', '.join([fila[0] for fila in rows]))
-    
